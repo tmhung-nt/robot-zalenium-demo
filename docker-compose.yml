@@ -10,14 +10,11 @@ services:
     ports:
       - "4444:4444"
     volumes:
-      - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
-      - /tmp/videos:/home/seluser/videos
+      - /d/temp/videos:/home/seluser/videos
     command: ["start",
               "--screenWidth", "1920",
-              "--screenHeight", "1080",
-              "--chromeContainers", "0",
-              "--firefoxContainers", "0"]
+              "--screenHeight", "1080",]
 
   robot:
     build:
